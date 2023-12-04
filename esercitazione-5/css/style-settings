@@ -1,0 +1,11 @@
+*{
+    color:gainsboro;
+}
+.settingsInput::placeholder{
+    color:rgb(0, 0, 0);
+    padding-left: 0em;
+    font-weight: 500;
+}
+.settingsInput{
+    width: 60%;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix clone</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body class="bg-black">
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand">
+                <img src="assets/images/netflix_logo.png" class="navbar-brand col-2" width="100" height="auto">
+                <ul class="navbar-nav col-6">
+                    <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active text-white">TV Shows</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Movies</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Recently Added</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">My List</a></li>
+                </ul>
+                <ul class="navbar-nav col-4 d-flex justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link py-4 text-white"><i class="bi bi-search"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link py-4 text-white"> KIDS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link py-4 text-white"><i class="bi bi-bell-fill"></i></a></li>
+                    <li class="nav-item"><a href="#"> 
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                              <li class="nav-item dropstart">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/avatar.png" width="30" class="me-4 mt-3">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                    <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Log-Out</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+    <div class="container-fluid w-50">
+        <h2 class="text-capitalize">edit profile</h2>
+        <hr class="w-100">
+        <div class="container d-flex">
+            <div class="container position-relative w-25">
+                <img src="assets/images/avatar.png" class="w-75">
+                <i class="bi bi-pencil position-absolute top-0 start-0 ms-3 mt-5 pt-3"></i>
+            </div>
+            <div class="container-fluid w-75">
+                <input type="text" class="form-control-plaintext border-0 rounded-0 bg-secondary text-white" placeholder="Your Username">
+                <fieldset class="my-4">
+                    <label for="select" class="form-label">Language:</label>
+                    <select id="select" class="form-select text-bg-dark w-auto" aria-label="Default">
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="German">German</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Dutch">Dutch</option>
+                    </select>
+                </fieldset>
+                <hr>
+                <fieldset>
+                    <label for="ratings">Maturity Settings:</label>
+                    <select id="ratings" class="form-select text-bg-secondary text-uppercase w-auto" aria-label="Default" disabled="true">
+                        <option value="all maturity ratings" class="opzioni">all Maturity settings</option>
+                        <option value="ratings for kids" class="opzioni">vm12</option>
+                        <option value=" ratings for teens" class="opzioni">vm18</option>
+                    </select>
+                    <label for="edit" class="form-label py-1">Show titles of <span id="selezionato"></span> for this profile</label>
+                    <br>
+                    <button id="edit"class="btn btn-outline-light rounded-0 px-4">EDIT</button>
+                    <button id="done"class="btn btn-outline-light rounded-0 px-4" style="visibility: hidden;">DONE</button>
+                </fieldset>
+                <hr>
+                <fieldset>
+                    <p>Autoplay controls</p>
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1">Autoplay next episode in a series on all devices.</label>
+                    <br>
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2"> Autoplay previews while browsing on al devices.</label>
+                </fieldset>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid d-flex justify-content-evenly">
+            <button class="btn w-auto rounded-1 text-uppercase btn-light fw-bold px-4">save</button>
+            <button class="btn w-auto rounded-1 text-uppercase btn-outline-secondary px-4">cancel</button>
+            <button class="btn w-auto rounded-1 text-uppercase btn-outline-secondary px-4">delete profile</button>
+        </div>
+    </div>
+    <!-- 
+    
+    <i class="bi bi-check"></i>
+    <i class="bi bi-paypal"></i>
+    <i class="bi bi-badge-4k"></i> -->
+    <footer class=" container-fluid d-grid w-50 pt-5 text-capitalize" style="font-size: smaller;">
+        <div class="d-flex p-1 ms-2">
+            <a href="#"><i class="bi bi-facebook px-2"></i></a>
+            <a href="#"><i class="bi bi-instagram px-2"></i></a>
+            <a href="#"><i class="bi bi-twitter-x px-2"></i></a>
+            <a href="#"><i class="bi bi-youtube px-2"></i></a>
+        </div>
+        <div class="container row">
+            <ul class="col-3">
+                <li class="list-group-item list-unstyled border-0 bg-transparent"> <a href="#" class="link-light text-decoration-none">audio and subtitles</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"> <a href="#" class="link-light text-decoration-none">media center</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">privacy</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">contact us</a></li>
+            </ul>
+            <ul class="col-3">
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">audio description</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">investor relations</a> </li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">legal notices</a></li>
+            </ul>
+            <ul class="col-3">
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">help center</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">jobs</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">cookie preferences</a></li>
+            </ul>
+            <ul class="col-3">
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">gift cards</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">terms of use</a></li>
+                <li class="list-group-item list-unstyled border-0 bg-transparent"><a href="#" class="link-light text-decoration-none">corporate information</a></li>
+            </ul>
+        </div>
+        <button class="text-capitalize bg-transparent border-light w-25">service code</button>
+        <p class="py-2">&copy;1997-2019 Netflix,Inc.{i-0d00fcda2fdf9c0de}</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/script/index.js"></script>
+</body>
+</html>
